@@ -1,0 +1,13 @@
+:root {
+  /* ### Primary */
+
+--GrayishBlue: hsl(237, 18%, 59%);
+--SoftRed: hsl(345, 95%, 68%);
+
+/* ### Neutral */
+
+--White: hsl(0, 0%, 99%);
+--DarkDesaturatedBlue: hsl(236, 21%, 26%);
+--VeryDarkBlue: hsl(236, 17%, 17%);
+--VeryDarkMostlyBlackBlue: hsl(234, 17%, 12%);
+}

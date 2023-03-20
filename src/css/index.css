@@ -1,0 +1,136 @@
+/*
+ Name: Launch countdown timer.
+ Description: A Frontendmentor.io coding challenge;
+ Author: Federico Borzani
+ Author URL:  https://github.com/eserengo/
+*/
+
+@import "variables.css";
+
+:root {
+  font-family: "Red Hat Text";
+  font-size: 14px;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0%;
+  margin: 0%;
+  user-select: none;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.main {
+  min-height: 95vh;
+  background-color: var(--VeryDarkMostlyBlackBlue);
+  background-image: url('../images/pattern-hills.svg'), url('../images/bg-stars.svg');
+  background-repeat: no-repeat;
+  background-position: bottom, top;  
+  background-size: 100% 20%, contain;
+}
+
+.primary.title {
+  font-size: 120%;
+  letter-spacing: 4px;
+  color: var(--White);
+}
+
+.key {
+  font-size: 60%;
+  letter-spacing: 1px;
+  color: var(--GrayishBlue);
+  margin-top: 16px;
+}
+
+.card,
+.flip-card {
+  color: var(--SoftRed);
+  background-color: var(--VeryDarkMostlyBlackBlue);
+  box-shadow: 0px 4px 4px var(--VeryDarkMostlyBlackBlue);
+}
+
+.card-top,
+.card-bottom {
+  z-index: 0;
+}
+
+.flip-top,
+.flip-bottom {
+  z-index: 1;
+}
+
+.card-top,
+.card-bottom,
+.flip-top,
+.flip-bottom {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card-top, 
+.flip-top { 
+  line-height: calc(100% * 1.65);
+  background-color: var(--VeryDarkBlue);
+  border: 1px solid var(--VeryDarkBlue);
+  top: 0%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card-bottom, 
+.flip-bottom {
+  line-height: calc(100% * -2);
+  background-color: var(--DarkDesaturatedBlue);
+  border: 1px solid var(--DarkDesaturatedBlue);
+  bottom: 0%;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.flip-top {
+  animation: flip-top-animation 1s infinite;
+  transform-origin: bottom;
+  transition: animation 1s ease;
+}
+
+.flip-bottom {
+  animation: flip-bottom-animation 1s infinite;
+  transform-origin: top;
+  transition: animation 1s ease;
+}
+
+@keyframes flip-top-animation {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50%,
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom-animation {
+  0%,
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.icon:hover {
+  filter: invert(100%) sepia(200%) saturate(2000%) hue-rotate(300deg) brightness(100%) contrast(100%);
+}
+
+.attribution {
+  display: block;
+  font-size: 70%;
+}

@@ -1,0 +1,42 @@
+@import "variables.css";
+
+:root {
+  --flip: 96px;
+  font-size: 14px;
+}
+
+body {
+  min-width: 550px;
+}
+
+.main {
+  padding: 10% 10% 5%;
+  justify-content: space-evenly !important;
+}
+
+.primary.title {
+  padding: 0%;
+}
+
+.timer {
+  margin: 10% 0% 20%;
+  gap: 16px;
+}
+
+.card,
+.flip-card {
+  width: var(--flip);
+  height: var(--flip);
+  font-size: 400%;
+}
+
+.card-top,
+.card-bottom,
+.flip-top,
+.flip-bottom {
+  height: calc(var(--flip) * 0.5);
+}
+
+.social {
+  gap: 32px;
+}
